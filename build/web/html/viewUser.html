@@ -1,0 +1,14 @@
+<!--  This is not a complete HTML page. It just has the HTML that should go in the content area of your page. -->
+
+<div style="margin-left:2em;">
+    <p>
+        Enter the id of a mmo player. If that player is in the database, all info of that user will be displayed. 
+    </p>
+
+    <p>
+        Player Id:
+        <input type="text" id="webUserId"/>
+        <button onclick="findUserFn(document.getElementById('webUserId').value)">Find Player</button>
+    </p>
+    <div id="userInfoHere"></div>
+</div>

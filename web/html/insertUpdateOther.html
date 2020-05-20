@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<div id="insertArea">
+
+    <table>
+        <tr id='gameClassIdRow'>
+            <td>Game Class Id</td>
+            <td><input type="text"  id="gameClassId" disabled="disabled"/></td>
+            <td ></td> 
+        </tr>
+        <tr>
+            <td>Class name</td>
+            <td><input type="text"  id="className" /></td>
+            <td id="classNameError" class="error"></td> 
+        </tr>
+        <tr>
+            <td>class Description</td>
+            <td><input type="text"  id="classDescription" /></td>
+            <td id="classDescriptionError" class="error"></td>
+        </tr>
+        <tr>
+            <td>attack</td>
+            <td><input type="text" id="attack" /></td>
+            <td id="attackError" class="error"></td> 
+        </tr>
+        <tr>
+            <td>defense</td>
+            <td><input type="text" id="defense" /></td>
+            <td id="defenseError" class="error"></td> 
+        </tr>
+        <tr>
+            <td>magic</td>
+            <td><input type="text" id="magic" /></td>
+            <td id="magicError" class="error"></td>
+        </tr>
+        <tr>
+            <td>stealth</td>
+            <td><input type="text" id="stealth" /></td>
+            <td id="stealthError" class="error"></td>
+        </tr>
+        
+        <tr>
+            <td>speed</td>
+            <td><input type="text" id="speed" /></td>
+            <td id="speedError" class="error"></td> 
+        </tr>
+        <tr>
+            <td>crit</td>
+            <td><input type="text" id="crit" /></td>
+            <td id="critError" class="error"></td>
+        </tr>
+        <tr>
+            <!-- see js/insertUser.js to see the insertUser function (make sure index.html referencesinvokes the js file) -->
+            <td>
+                <button id="insertSaveOtherButton" onclick="otherCRUD.insertSave()">Insert Save</button>
+                <button id="updateSaveOtherButton" onclick="otherCRUD.updateSave()">Update Save</button>
+            </td>
+            <td id="recordError" class="error"></td>
+            <td></td>
+        </tr>
+    </table>
+</div>

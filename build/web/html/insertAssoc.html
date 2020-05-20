@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<div id="insertArea">
+
+    <table>
+        <!--<tr>
+            <td>player ID</td>
+            <td><input type="text"  id="playerId" /></td>
+            <td id="playerIdError" class="error"></td>
+        </tr> -->
+        <tr>
+            <td>Player Email</td>  
+            <td>
+                <select id="emailPickList">
+                    <!-- JS code will make ajax call to get all the roles 
+                    then populate this select tag's options with those roles -->
+                </select>
+            </td>
+
+            <td id="playerIdEmailError" class="error"></td>
+        </tr>
+        <!--<tr>
+            <td>game class ID</td>
+            <td><input type="text" id="gameClassId" /></td>
+            <td id="gameClassIdError" class="error"></td> 
+        </tr>
+        <tr> -->
+        <tr>
+            <td>Class Name</td>  
+            <td>
+                <select id="classPickList">
+                    <!-- JS code will make ajax call to get all the roles 
+                    then populate this select tag's options with those roles -->
+                </select>
+            </td>
+
+            <td id="gameClassIdNameError" class="error"></td>
+        </tr>
+            <td>character name</td>
+            <td><input type="text" id="characterName" /></td>
+            <td id="characterNameError" class="error"></td> 
+        </tr>
+        <tr>
+            <td>character Created Date</td>
+            <td><input type="text" id="characterCreatedDate" /></td>
+            <td id="characterCreatedDateError" class="error"></td>
+        </tr>
+        <tr>
+            <!-- see js/insertUser.js to see the insertUser function (make sure index.html referencesinvokes the js file) -->
+            <td><button onclick="insertAssoc()">Save</button></td>
+            <td id="recordError" class="error"></td>
+            <td></td>
+        </tr>
+    </table>
+</div>

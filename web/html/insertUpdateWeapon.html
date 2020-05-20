@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<div id="insertArea">
+
+    <table>
+        <tr id='weaponIdRow'>
+            <td>weapon Id</td>
+            <td><input type="text"  id="weaponId" disabled="disabled"/></td>
+            <td ></td> 
+        </tr>
+        <tr>
+            <td>weapon name</td>
+            <td><input type="text"  id="weaponName" /></td>
+            <td id="weaponNameError" class="error"></td> 
+        </tr>
+        <tr>
+            <td>weapon Type</td>
+            <td><input type="text"  id="weaponType" /></td>
+            <td id="weaponTypeError" class="error"></td>
+        </tr>
+        <tr>
+            <td>rarity</td>
+            <td><input type="text" id="rarity" /></td>
+            <td id="rarityError" class="error"></td> 
+        </tr>
+        <tr>
+            <td>history</td>
+            <td><input type="text" id="history" /></td>
+            <td id="historyError" class="error"></td> 
+        </tr>
+        <tr>
+            <td>ability</td>
+            <td><input type="text" id="ability" /></td>
+            <td id="abilityError" class="error"></td>
+        </tr>
+        
+        <tr>
+            <!-- see js/insertUser.js to see the insertUser function (make sure index.html referencesinvokes the js file) -->
+            <td>
+                <button id="insertSaveWeaponButton" onclick="weaponCRUD.insertSave()">Insert Save</button>
+                <button id="updateSaveWeaponButton" onclick="weaponCRUD.updateSave()">Update Save</button>
+            </td>
+            <td id="recordError" class="error"></td>
+            <td></td>
+        </tr>
+    </table>
+</div>

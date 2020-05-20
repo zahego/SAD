@@ -1,0 +1,60 @@
+<div id="insertArea">
+
+    <table>
+        <tr id='webUserIdRow'>
+            <td>Player Id</td>
+            <td><input type="text"  id="playerId" disabled="disabled"/></td>
+            <td ></td> 
+        </tr>
+        <tr>
+            <td>Email Address</td>
+            <td><input type="text"  id="playerEmail" /></td>
+            <td id="playerEmailError" class="error"></td> 
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password"  id="playerPassword" /></td>
+            <td id="playerPasswordError" class="error"></td>
+        </tr>
+        <tr>
+            <td>Retype Your Password</td>
+            <td><input type="password" id="playerPassword2" /></td>
+            <td id="playerPassword2Error" class="error"></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="text" id="age" /></td>
+            <td id="ageError" class="error"></td> 
+        </tr>
+        <tr>
+            <td>Registration date</td>
+            <td><input type="text" id="registrationDate" /></td>
+            <td id="registrationDateError" class="error"></td> 
+        </tr>
+        <tr>
+            <td>Total transaction</td>
+            <td><input type="text" id="totalTransaction" /></td>
+            <td id="totalTransactionError" class="error"></td>
+        </tr>
+        <tr>
+            <td>User Role</td>  
+            <td>
+                <select id="rolePickList">
+                    <!-- JS code will make ajax call to get all the roles 
+                    then populate this select tag's options with those roles -->
+                </select>
+            </td>
+
+            <td id="playerRoleIdError" class="error"></td>
+        </tr>
+        <tr>
+            <!-- see js/insertUser.js to see the insertUser function (make sure index.html referencesinvokes the js file) -->
+            <td>
+                <button id="insertSaveUserButton" onclick="userCRUD.insertSave()">Insert Save</button>
+                <button id="updateSaveUserButton" onclick="userCRUD.updateSave()">Update Save</button>
+            </td>
+            <td id="recordError" class="error"></td>
+            <td></td>
+        </tr>
+    </table>
+</div>

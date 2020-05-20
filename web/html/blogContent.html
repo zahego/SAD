@@ -1,0 +1,109 @@
+<!--  This is not a complete HTML page. It just has the HTML that should go in the content area of your page. -->
+
+<!-- These style rules will be applied after (or on top of) any other styles defined in the header of the template -->
+<style>
+    #content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    h3{
+        color: #709129;
+    }
+    #content p {
+        margin-left: 1em;
+        color: #f2f2f2;
+        /* indent paragraphs inside of content (indent amount is the size of a captial "M") */
+    }
+    a{
+        color: yellowgreen;
+    }
+</style>
+
+<h3>Homework 1: Web Proposal</h3>
+<p>
+    I did a proposal for a website based on my interest in game and novel writing. 
+    The proposal contain a list of the basic feature for the website. 
+    Very confuse between homework and lab but I luckily submit it on time (just to realized it won't be graded)
+</p>
+<p>
+    Click <a href="https://docs.google.com/document/d/1OIvKmTRJ9--xFqnPILxBDtXhUY4JEJhFF5LbPI65JYo/edit">here</a> to see the work.
+</p>
+<!-- download="../bloghw/lab_1.docx" -->
+<h3>Homework 2: Database</h3>
+<p>
+    I populate the 2 databases, in which one is mine and the other is for grading. 
+    I have a bit of problem with the foreign key and inserting data into my database but overall the process isn't hard. 
+    Still have trouble with lab and homework submission.
+</p>
+
+<p>
+    Click <a href="https://docs.google.com/document/d/1Ogyki22CyZIPSaGlhyvHl7Ul2tSNEZgud88pVIIKIC0/edit">here</a> to see the document that shows my populated database.
+</p>
+
+<h3>Homework 3: JSP Home Page</h3>
+<p>
+    I was a bit confuse with the homework and lab and result in not turning the project on time. 
+    However, on the bright side, I have tried to make the webpage as beautiful as possible with self design logo and self drawn image. 
+    I also spent a lot of time working on the left nav bar and the overall design of the page. 
+    (which is not what I suppose to do in the first place) With all the sidetrack aside, 
+    I have dissected the code carefully and was success in replicate the source code into my own version.
+</p>
+<p> 
+    Click <a href="http://cis-linux2.temple.edu:8080/FA18_3308_tug70814/">here</a> to see my home page. 
+</p>
+
+ <h3>Homework 4: Display Data</h3>
+ <p>Data Model</p>
+ <p>
+     The data model contain 4 table, 1 user table, 1 other table, 1 associative table and 1 user role table.
+ My web data model is based on an online game website data model so the user table will be replaced with mmo_player table,
+ the other table becomes game_class, associative table becomes your_character table and user role become user_role.
+ The model is based on a many to many relationship between mmo_player table and game_class table and a
+ one to one relationship between mmo_player table and user_role able. The premiere of the database is that one player can hold
+ many game class and one game class can be played by many player. The user will also have a role assigned to them in the context of operating the game.
+ The mmo_player tale holds information about the players and the game_class table holds the information about fantasy class that the player can choose from.
+ The your_character table is the connection between the mmo_player and the game_class and hold the record for each player's game_class record.
+ The user_role table hold information about role of player ranging from player to admin
+ </p>
+ <p>
+     Click <a href="../bloghw/datamodel.png">here</a> to see the data model
+ </p>
+ <p>Data Display</p>
+ <p>
+            I still manage to screw up the homework and the lab, but this time I think I get the hang of it.
+            Besides that, I manage to run the source code and reuse the code to make some alteration and add 2 more packages and 2 more API page. 
+            I didn't understand what the dropdownMenu.html was for until I open it individually and found that it was a big help. 
+            I have quite some trouble adjusting the drop down menu until I found out about !important. 
+            Connecting with database caused me some vexation a few first time before I learned that the error system is really helpful.
+ </p>
+
+ <p> Click <a href="https://docs.google.com/document/d/1OYQcds2BMXw68CWiXgK0ny1Awthmf2KuiHpe1_IK1cg/edit">here</a> to see my home page. </p>
+ <h3>Homework 5: Log on</h3>
+ <p>
+     for this assignment, I make some alteration to the lab to create a log on function that can be access through 
+     the search option in the web page. I had no problem with the lab but I do have problems that I couldn't fix until the next lab. 
+     The problem lies mostly on the the log on jsp and jx files as the getParameter() seems to be stranger than I thought. 
+ </p>
+
+<h3>Homework 6: Insert</h3>
+ <p>
+     for this assignment, I alter the code for the complex insert function for the "user table" and create some other insert
+     function for "other table" and "associate table". It was fairy easy with the other and associate table but I got some problem with the user table since 
+     I got some problem with PickUser Role part. The problem was that my user role was in String datatype but the given code data type is Int. 
+     I fix the problem by altering my own database to match the given data type. Quite a cheap move but due to the time constrain I have no other choice.
+ </p>
+ 
+ <h3>Homework 7: Delete</h3>
+ <p>
+     for this assignment, I alter the code for the delete function and add additional delete function for other and associative table.
+     for some reason, this time I forgot to submit the homework this time. Life is such a roller coaster. Nothing is too difficult about the 
+     work this week besides from my late tendency.
+ </p>
+ 
+  <h3>Homework 8: Update</h3>
+ <p>
+     for this assignment, I add a CRUD that combine all insert, delete and update into one javascript files.
+     the assignment was rather simple. I also add additional picklist for the insert and update function of the associative table. 
+     I also found out that I have to do my final test today as well. Wish me luck.
+ </p>
+        ...

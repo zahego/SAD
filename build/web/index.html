@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SAD</title>
+
+    <link href="style/myStyle.css" rel="stylesheet" type="text/css" />
+    <link href="style/listStyle.css" rel="stylesheet" type="text/css" />
+    <link href="style/insertStyle.css" rel="stylesheet" type="text/css" />
+    <link href="style/slideshowStyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="bgimg"></div>
+
+    <div id="titleNav">
+        
+            <img class="logo" src="pics/logo2.png">
+
+        <div id="pageTitle">
+
+            Symphonies at Dawn
+        </div>
+
+        <!-- The style sheet has nav floated right -->
+        <div id="nav">
+            <div class="menu"><a onclick=" ajaxCall('html/homepage.html', setContent, setError) ">Home</a></div>
+
+            <!--<div class="menu" onclick="toggleSubMenu(this)">
+                Player info
+                <div class="submenu">
+                    <a onclick="ajaxCall('webAPIs/listUsersAPI.jsp', setDeleteContent, setError)">Player</a>
+                    <br>
+                    <a onclick="ajaxCall('webAPIs/listOtherAPI.jsp', setOtherDeleteContent, setError)">Game_Class</a>
+                    <br>
+                    <a onclick="ajaxCall('webAPIs/listAssocAPI.jsp', setAssocDeleteContent, setError)">Your_character</a>
+                    <br>
+                     <a onclick="ajaxCall('html/listWeapon.html', setWeaponContent, setError)">Weapon</a>
+                </div>
+            
+
+            </div>-->
+            <div class="menu" onmouseover="toggleSubMenu(this)" onmouseout="toggleSubMenu(this)">
+                CRUD
+                <div class="submenu">
+                    <a onclick = "userCRUD.list()">Payer</a>
+                    <br>
+                    <a onclick = "otherCRUD.list()">Game_Class</a>
+                    <br>
+                    <a onclick = "assocCRUD.list()">Your_character</a>
+                    <br>
+                    <a onclick = "weaponCRUD.list()">weapon</a>
+                    <br>
+                     </div>
+            
+
+            </div>
+            <!--<div class="menu" onclick="toggleSubMenu(this)">
+                Search
+                 <div class="submenu">
+                <a onclick = "ajaxCall('html/viewUser.html', setContent, setError)">Player</a>
+                <br>
+                <a onclick = "ajaxCall('html/viewOther.html', setContent, setError)">Class</a>
+                 </div>
+            </div> -->
+            <div class="menu" onmouseover="toggleSubMenu(this)" onmouseout="toggleSubMenu(this)">
+                Account
+                 <div class="submenu">
+                <a onclick = "ajaxCall('html/logOn.html', setContent, setError)">Log on/off</a>
+                <br>
+                <a onclick = "ajaxCall('webAPIs/getProfileAPI.jsp', setUserContent, setError)">Profile</a>
+                 </div>
+            </div>
+             <!-- <div class="menu" onclick="toggleSubMenu(this)">
+            Insert
+                <div class="submenu">
+            <a onclick = "ajaxCall('html/insertUser2.html', setRegisterContent, setError)">Register</a>
+            <br>
+            <a onclick = "ajaxCall('html/insertOther.html', setOtherRegisterContent, setError)">Class Reg</a>
+            <br>
+            <a onclick = "ajaxCall('html/insertAssoc.html', setAssocRegisterContent, setError)">Character Reg</a>
+            </div>
+            </div> -->
+            <div class="menu"><a onclick=" ajaxCall('html/blogContent.html', setContent, setError) ">Blog</a></div>
+        </div>
+
+        <!-- Must stop the floating so that elements below (e.g., content) 
+            don't float up into here. -->
+        <div class="stopFloat"></div>
+    </div>
+    
+
+    <div id="content">
+        
+        <script src="js/dropDownMenu.js"></script>
+        <script src="js/ajaxUtilities.js"></script>
+        <script src="js/buildTable.js"></script>
+        <script src="js/viewUser.js"></script>
+        <script src="js/viewOther.js"></script>
+        <script src="js/logOn.js"></script>
+        <script src="js/logOff.js"></script>
+        <script src="js/insertOther.js"></script>
+        <script src="js/insertUser.js"></script>
+        <script src="js/insertAssoc.js"></script>
+        <script src="js/makePickList.js"></script>
+        <script src="js/slideshow.js"></script>
+        <script src="js/Weapon.js"></script>
+        <script src="js/deleteUser.js"></script>
+        <script src="js/deleteOther.js"></script>
+        <script src="js/deleteAssoc.js"></script>
+        <script src="js/userCRUD.js"></script>
+        <script src="js/ajax.js"></script>
+        <script src="js/assocCRUD.js"></script>
+        <script src="js/otherCRUD.js"></script>
+        <script src="js/weaponCRUD.js"></script>
+        <script src="js/Song.js"></script>
+        
+
+        <script>
+            
+            // Place the contents of the file url into the 
+            // innerHTML property of the HTML element with id "content". 
+            function setContent(httpRequest) {
+                console.log("Ajax call was successful.");
+                document.getElementById("content").innerHTML = httpRequest.responseText;
+            }
+            function setWeaponContent(httpRequest) {
+                console.log("Ajax call was successful.");
+                
+                document.getElementById("content").innerHTML = httpRequest.responseText;
+                
+                
+                document.getElementById("pageNum0").value = "0";
+                document.getElementById("pageNum1").value = "50";
+                document.getElementById("pageNum2").value = "100";
+                document.getElementById("pageNum3").value = "150";
+                document.getElementById("pageNum4").value = "200";
+                document.getElementById("pageNum5").value = "250";
+                document.getElementById("pageNum6").value = "300";
+                document.getElementById("pageNum7").value = "350";
+                document.getElementById("pageNum8").value = "400";
+                WeaponPgFn(document.getElementById('pageNum0').value);
+            }
+            
+            function setSongContent(httpRequest) {
+                console.log("Ajax call was successful.");
+                document.getElementById("content").innerHTML = httpRequest.responseText;
+                
+                document.getElementById("pageNumSong0").value = "0";
+                document.getElementById("pageNumSong1").value = "50";
+                document.getElementById("pageNumSong2").value = "100";
+                document.getElementById("pageNumSong3").value = "150";
+                document.getElementById("pageNumSong4").value = "200";
+                document.getElementById("pageNumSong5").value = "250";
+                SongPgFn(document.getElementById('pageNumSong0').value);
+            }
+
+            function setError(httpRequest) {
+                console.log("Ajax call was NOT successful.");
+                console.log(httpRequest);
+                document.getElementById("content").innerHTML = httpRequest.errorMsg;
+            }
+
+            function setUserContent(httpRequest) {
+
+                console.log("listUsersResponse - here is the value of httpRequest object (next line)");
+                console.log(httpRequest);
+
+                var obj = JSON.parse(httpRequest.responseText);
+
+                if (obj === null) {
+                    target.innerHTML = "listUsersResponse Error: JSON string evaluated to null.";
+                    return;
+                }
+
+                var target = document.getElementById("content");
+                target.innerHTML = "<br/>"; // clear out old content and add new line spacing
+                buildTable(obj.webUserList, obj.dbError, target);
+            }
+            
+
+
+            // Make sure initial page load has home content displayed. 
+            ajaxCall('html/homepage.html', setContent, setError);
+        </script>
+    </div>
+    <div id="footer">
+        Minh Tran Hoang
+    </div>
+
+    <script>
+        function toggleSubMenu(ele) {
+            console.log("current element is " + ele.innerHTML);
+
+            var subs = ele.getElementsByClassName("submenu");
+
+            if (subs.length > 0) {
+                var submenu = subs[0]; // get first submenu
+                console.log("submenu is " + submenu.innerHTML);
+
+                if (submenu.style.display === "block") {
+                    submenu.style.display = "none";
+                } else {
+                    submenu.style.display = "block";
+                }
+            } else {
+                console.log("this element does not have any children with class 'submenu'. ");
+            }
+        }
+    </script>
+</body>
+
+</html>
