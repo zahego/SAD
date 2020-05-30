@@ -1,6 +1,7 @@
 
 ## SAD
 site: [http://cis-linux2.temple.edu:8080/FA18_3308_tug70814/](http://cis-linux2.temple.edu:8080/FA18_3308_tug70814/)  
+The title is short for Symphony At Dawn (I know, I'm a genius)
 A (almost) gaming sites that provide information and immerse gameplay experience. Or at least that's what it is intended to be.
 I created this with vanilla JS, HTML and CSS for Web Dev course at Temple University
 
